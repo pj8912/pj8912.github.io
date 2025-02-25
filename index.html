@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Pinto | Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="keywords" content="full-stack developer, freelance web developer, web designer, frontend developer, backend developer, Python developer, Flask developer, JavaScript developer, HTML5 CSS3 developer, Bootstrap developer, movie scene database developer, news app developer, e-commerce site developer, Chennai web developer, Tamil Nadu freelancer, experienced developer">
+    <meta name="description" content="Full-Stack Developer | Innovator of Scenestamps | Crafting Unique Web Experiences">
+    <meta property="og:title" content="John Pinto | Full-Stack Developer | Portfolio">
+    <meta property="og:description" content="Explore the portfolio of John Pinto, a full-stack developer known for innovative projects like Scenestamps and expertise in Python, JavaScript, and more.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/59218902?v=4&size=64">
+    <meta property="og:url" content="https://pj8912.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="John Pinto | Full-Stack Developer & Innovator">
+    <meta name="twitter:description" content="Crafting unique web experiences and pioneering projects like Scenestamps.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/59218902?v=4&size=64">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --primary: #1e293b;
+            --secondary: #f97316;
+            --accent: #dc2626;
+            --light: #f8fafc;
+            --dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .headline {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: var(--light);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .project-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-tag {
+            background-color: rgba(249, 115, 22, 0.1);
+            color: var(--secondary);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .skill-category {
+            border-left: 3px solid var(--secondary);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .skill-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 5px;
+            font-weight: 500;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 10px rgba(220, 38, 38, 0.2);
+        }
+
+        .scene-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(249, 115, 22, 0.1);
+            position: absolute;
+            top: -30px;
+            left: -15px;
+            z-index: 0;
+        }
+
+        .behind-scenes {
+            background-color: rgba(30, 41, 59, 0.05);
+            border-left: 3px solid var(--primary);
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .coming-soon {
+            background: linear-gradient(135deg, #22c55e, #0d9488);
+            color: white;
+            transform: rotate(-2deg);
+            padding: 8px 20px;
+            display: inline-block;
+            margin-top: 30px;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        /* Film reel animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .film-reel {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.1;
+            z-index: 0;
+            animation: spin 30s linear infinite;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .headline {
+                text-align: center;
+                padding: 2rem !important;
+            }
+            .section-title {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .section-title::after {
+                left: 20%;
+                width: 60%;
+            }
+        }
+
+        /* Navbar style */
+        .nav-link {
+            position: relative;
+            padding: 5px 0;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="py-4 px-6 md:px-10 flex justify-between items-center bg-white shadow-md sticky top-0 z-50">
+        <a href="#" class="text-2xl font-bold text-gray-800">JP<span class="text-orange-500">.</span></a>
+        <div class="hidden md:flex space-x-1">
+            <a href="#intro" class="nav-link">Opening Credits</a>
+            <a href="#projects" class="nav-link">Highlight Reel</a>
+            <a href="#skills" class="nav-link">The Gear</a>
+            <a href="#about" class="nav-link">Director's Commentary</a>
+            <a href="#contact" class="nav-link">Call Sheet</a>
+        </div>
+        <a href="#contact" class="cta-button text-sm py-2 px-4">Get in Touch</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="intro" class="headline py-20 px-6 md:px-20 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Fade in: I'm John Pinto</h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-8 leading-relaxed">A full-stack developer scripting solutions that steal the show. From launching a platform that freezes movie magic in time to automating news with AI precision, my career is a reel of real impact.</h2>
+            <div class="flex flex-col md:flex-row gap-4 mt-10">
+                <a href="#projects" class="cta-button text-center">View My Work</a>
+                <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-full transition duration-300 text-center">Contact Me</a>
+            </div>
+        </div>
+        <div class="film-reel" style="top: 10%; left: 10%;">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="white"/>
+                <circle cx="50" cy="15" r="8" fill="white"/>
+                <circle cx="50" cy="85" r="8" fill="white"/>
+                <circle cx="15" cy="50" r="8" fill="white"/>
+                <circle cx="85" cy="50" r="8" fill="white"/>
+                <circle cx="26" cy="26" r="8" fill="white"/>
+                <circle cx="74" cy="26" r="8" fill="white"/>
+                <circle cx="26" cy="74" r="8" fill="white"/>
+                <circle cx="74" cy="74" r="8" fill="white"/>
+            </svg>
+        </div>
+        <div class="film-reel" style="bottom: 10%; right: 10%;">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="white"/>
+                <circle cx="50" cy="15" r="8" fill="white"/>
+                <circle cx="50" cy="85" r="8" fill="white"/>
+                <circle cx="15" cy="50" r="8" fill="white"/>
+                <circle cx="85" cy="50" r="8" fill="white"/>
+                <circle cx="26" cy="26" r="8" fill="white"/>
+                <circle cx="74" cy="26" r="8" fill="white"/>
+                <circle cx="26" cy="74" r="8" fill="white"/>
+                <circle cx="74" cy="74" r="8" fill="white"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 md:px-20 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 section-title">Highlight Reel</h2>
+            
+            <!-- Project 1 -->
+            <div class="project-card mb-20 bg-white">
+                <div class="relative p-8 md:p-10">
+                    <div class="scene-number">01</div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Scenestamps – The Moment Catcher</h3>
+                        <p class="text-lg mb-6">A platform that lets cinephiles rewind to their favorite movie moments using subtitle-powered search.</p>
+                        
+                        <div class="mb-6">
+                            <div class="tech-tag">Python</div>
+                            <div class="tech-tag">Flask</div>
+                            <div class="tech-tag">SQLite</div>
+                            <div class="tech-tag">HTML5</div>
+                            <div class="tech-tag">CSS3</div>
+                            <div class="tech-tag">JavaScript</div>
+                            <div class="tech-tag">Nginx</div>
+                        </div>
+                        
+                        <div class="impact bg-orange-50 p-4 rounded-lg inline-block">
+                            <span class="font-semibold text-orange-600">Impact:</span>
+                            <span class="ml-2">Cataloged 1,000+ scenes, delivering a global first for film fans.</span>
+                        </div>
+                        
+                        <div class="behind-scenes mt-8">
+                            <h4 class="font-bold text-lg mb-2">Behind the Scenes</h4>
+                            <p>The subtitle parsing challenge was a plot twist I didn't see coming. After wrestling with irregular formatting across multiple subtitle formats, I engineered a custom parser that could handle SRT, SSA, and even malformed files with 97% accuracy. The key breakthrough came when I implemented a regex-based time signature extraction system that could normalize timestamps across different formats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card mb-20 bg-white">
+                <div class="relative p-8 md:p-10">
+                    <div class="scene-number">02</div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Newshint – The Newsroom Revolution</h3>
+                        <p class="text-lg mb-6">A bilingual news app meets a custom CRM and an AI-driven ANDSP system, rewriting how stories hit the headlines.</p>
+                        
+                        <div class="mb-6">
+                            <div class="tech-tag">Python</div>
+                            <div class="tech-tag">LLMs (Bart/MBart)</div>
+                            <div class="tech-tag">JavaScript</div>
+                            <div class="tech-tag">MySQL</div>
+                            <div class="tech-tag">Automation workflows</div>
+                        </div>
+                        
+                        <div class="impact bg-orange-50 p-4 rounded-lg inline-block">
+                            <span class="font-semibold text-orange-600">Impact:</span>
+                            <span class="ml-2">Cut publishing time by 50%, powering 10,000+ views in 3 months.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card mb-20 bg-white">
+                <div class="relative p-8 md:p-10">
+                    <div class="scene-number">03</div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Readtxt – The Text Stripper</h3>
+                        <p class="text-lg mb-6">A sleek tool that distills web articles into pure, readable text.</p>
+                        
+                        <div class="mb-6">
+                            <div class="tech-tag">Python</div>
+                            <div class="tech-tag">Web scraping</div>
+                            <div class="tech-tag">JavaScript</div>
+                        </div>
+                        
+                        <div class="impact bg-orange-50 p-4 rounded-lg inline-block">
+                            <span class="font-semibold text-orange-600">Impact:</span>
+                            <span class="ml-2">Simplified reading for thousands of users.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card bg-white">
+                <div class="relative p-8 md:p-10">
+                    <div class="scene-number">04</div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Movie Blog Automation – The Content Composer</h3>
+                        <p class="text-lg mb-6">An automation suite that spins IMDb's Top 200 movies into blog posts with a flick of code.</p>
+                        
+                        <div class="mb-6">
+                            <div class="tech-tag">Python</div>
+                            <div class="tech-tag">APIs</div>
+                            <div class="tech-tag">Web scraping</div>
+                            <div class="tech-tag">Flask</div>
+                        </div>
+                        
+                        <div class="impact bg-orange-50 p-4 rounded-lg inline-block">
+                            <span class="font-semibold text-orange-600">Impact:</span>
+                            <span class="ml-2">Generated a full blog in under 48 hours.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coming-soon mt-16 text-center mx-auto">
+                <span class="text-sm uppercase tracking-wider">Coming Soon</span>
+                <p class="font-bold">Scene 5: The AI Assistant Director – Automating creative decisions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 section-title">The Gear</h2>
+            <p class="text-xl mb-10">From pixel-perfect frames to AI-powered plots, this is my toolkit for coding the extraordinary.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Front-End Skills -->
+                <div class="skill-category">
+                    <h3 class="text-2xl font-bold mb-6">Front-End Reels</h3>
+                    <div class="flex flex-wrap">
+                        <div class="skill-item">HTML5</div>
+                        <div class="skill-item">CSS3</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Bootstrap5</div>
+                    </div>
+                </div>
+                
+                <!-- Back-End Skills -->
+                <div class="skill-category">
+                    <h3 class="text-2xl font-bold mb-6">Back-End Scripts</h3>
+                    <div class="flex flex-wrap">
+                        <div class="skill-item">Python (Flask)</div>
+                        <div class="skill-item">PHP (Core)</div>
+                    </div>
+                </div>
+                
+                <!-- Database Skills -->
+                <div class="skill-category">
+                    <h3 class="text-2xl font-bold mb-6">Database Cuts</h3>
+                    <div class="flex flex-wrap">
+                        <div class="skill-item">SQLite</div>
+                        <div class="skill-item">MySQL</div>
+                    </div>
+                </div>
+                
+                <!-- Production Tools -->
+                <div class="skill-category">
+                    <h3 class="text-2xl font-bold mb-6">Production Tools</h3>
+                    <div class="flex flex-wrap">
+                        <div class="skill-item">Git</div>
+                        <div class="skill-item">GitHub</div>
+                        <div class="skill-item">GitLab</div>
+                        <div class="skill-item">Nginx</div>
+                        <div class="skill-item">Apache</div>
+                        <div class="skill-item">Digital Ocean (VM/VPS)</div>
+                        <div class="skill-item">cPanel</div>
+                        <div class="skill-item">Linux (Ubuntu, CentOS, Fedora)</div>
+                    </div>
+                </div>
+                
+                <!-- Special Effects -->
+                <div class="skill-category md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6">Special Effects</h3>
+                    <div class="flex flex-wrap">
+                        <div class="skill-item">LLMs (BartForConditionalGeneration)</div>
+                        <div class="skill-item">MBartForConditionalGeneration</div>
+                        <div class="skill-item">AI-driven automation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-20 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 section-title">Director's Commentary</h2>
+            
+            <div class="md:flex gap-10 items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0">
+                    <div class="rounded-lg overflow-hidden shadow-xl bg-gray-100" style="height: 350px; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://avatars.githubusercontent.com/u/59218902?v=4" alt="John Pinto" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3">
+                    <p class="text-xl leading-relaxed mb-6">
+                        Armed with a Physics degree and a love for untangling complex problems, I've spent 4 years directing code into action—from indie freelance gigs to starring roles at startups. Whether it's freezing film moments or streamlining newsrooms, I thrive on building what's never been built before.
+                    </p>
+                    <p class="text-xl leading-relaxed mb-6">
+                        My approach to development combines analytical precision with creative problem-solving. Each project is a new story waiting to be told through elegant code and intuitive user experiences.
+                    </p>
+                    <p class="text-xl leading-relaxed">
+                        When I'm not behind the keyboard, you might find me analyzing film techniques or experimenting with new technologies that could power my next breakthrough project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 md:px-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 section-title">Call Sheet</h2>
+            
+            <div class="text-center">
+                <h3 class="text-2xl mb-8">Ready to co-star in my next project?</h3>
+                <p class="text-xl mb-12">Cut to me at <a href="mailto:johnpinto@email.com" class="text-orange-400 hover:underline">johnpinto@email.com</a> or find me on <a href="https://linkedin.com/in/johnpinto" target="_blank" class="text-orange-400 hover:underline">LinkedIn</a></p>
+                
+                <div class="flex justify-center gap-6 mt-8">
+                    <a href="#" class="text-white hover:text-orange-400 transition-colors">
+                        <i class="fab fa-github text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-orange-400 transition-colors">
+                        <i class="fab fa-linkedin text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-orange-400 transition-colors">
+                        <i class="fab fa-twitter text-3xl"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-20">
+                    <div class="inline-block p-4 bg-gray-800 rounded-lg">
+                        <p class="text-sm text-gray-400">That's a wrap!</p>
+                        <p class="text-xs mt-2 text-gray-500">© 2025 John Pinto. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
